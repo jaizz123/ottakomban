@@ -1,164 +1,1119 @@
-/* ------------------ Your Original CSS Remains Unchanged ------------------ */
-/* ... [your full original CSS pasted above] ... */
 
-/* ------------------- Responsive Styles Start Here ------------------- */
 
-/* Tablets: max-width 1024px */
-@media (max-width: 1024px) {
-  .section-text,
-  .section-text1,
-  .section-text2,
-  .description,
-  .herbs-description {
-    margin-left: 30px;
-    margin-right: 30px;
-  }
 
-  .section-image,
-  .bottle-alone,
-  .product-image,
-  .detail-img {
-    margin: 2rem auto;
-    display: block;
-  }
 
-  .company-content,
-  .detail-content,
-  .director-container,
+.page-wrapper {
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(to bottom, #000000, #1a1a1a);
+  color: white;
+}
+
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(4px);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home{
+  
+  background-size: cover;
+  height: 100vh;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  margin-right: 1rem;
+}
+
+.brand-text h1 {
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.brand-text p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.navbar-right a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-size: 1rem;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-banner {
+  margin-top: 50px;
+  width: 100%;
+  height: 200%;
+  border-radius: 12px;
+}
+
+/* Sections */
+.section {
+  padding: 4rem 2rem;
+}
+
+.pagesection {
+  background: linear-gradient(to left, #0E0A07,#2b1e15);
+  position: relative;
+}
+
+.section-blue-border {
+  border-left: 2px solid #ffffff;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.title-colorful{
+  font-size: 3rem;
+  color: #ffcc00;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 30px;
+}
+
+.section-heading {
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin-bottom: 100px;
+  margin-left: 50px;
+}
+
+.section-heading1 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin-bottom: 50px;
+  margin-left: 50px;
+  width: 100%;
+}
+
+.section-text,
+.section-text1,
+.section-text2 {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 1.25rem;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 700px;
+}
+
+/* Image Styles */
+.section-image {
+  max-width: 350px;
+  height: auto;
+  border-radius: 12px;
+  margin-left: 900px;
+  margin-top: -550px;
+}
+
+.bottle-alone {
+  display: block;
+  width: 550px;
+  margin-left: 920px;
+  margin-top: -600px;
+  margin-bottom: 50px;
+}
+
+/* Centered Content */
+.center-text {
+  margin-top: 150px;
+  width: 100%;
+}
+
+/* Divider Line */
+.section-divider1 {
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(to right, rgba(255,255,255,0.4), rgba(255,255,255,0));
+  margin: 2rem auto;
+  position: relative;
+}
+
+/* Optional Extra Section Styling */
+.section2 {
+  background: #000000;
+  margin-top: -30px;
+}
+
+.company-section {
+  background: #000000;
+  padding: 4rem 2rem;
+}
+
+.company-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 3rem;
+}
+
+.company-text {
+  font-size: 1.35rem;
+  line-height: 2;
+  color: #ffffff;
+  flex: 1;
+  max-width: 600px;
+  text-align: left;
+  margin-top: 60px;
+}
+
+.company-image {
+  flex-shrink: 0;
+  max-width: 550px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+
+
+/* Company Info */
+.company-section {
+  padding: 4rem 2rem;
+  background: black;
+}
+
+.company-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.company-text {
+  flex: 1;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.company-image {
+  width: 400px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Carousel */
+.collections-section {
+  background: radial-gradient(circle at center, #1b0f07, #000);
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.collections-title {
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 2rem;
+}
+
+.collections-title .bold {
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.carousel {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.product-image1 {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  transition: opacity 0.5s ease-in-out;
+  border-radius: 12px;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.carousel-controls button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s;
+}
+
+.carousel-controls button:hover {
+  transform: scale(1.2);
+  opacity: 0.6;
+}
+
+.production-section {
+  padding: 4rem 2rem;
+  background-color: #0e0a07; /* match your theme */
+  color: white;
+  font-family: 'Playfair Display', serif;
+}
+
+.production-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.production-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.production-text {
+  max-width: 400px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.production-text.left {
+  text-align: left;
+}
+
+.image-container {
+  max-width: 300px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.production-image {
+  width: 100%;
+  height: auto;
+  border: 1px solid #fff;
+}
+.footer-logos {
+  background-color: #0e0a07; /* or #000 if preferred */
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-box {
+  background-color: #fff;
+  padding: 1.5rem;
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+.contact-wrapper {
+  background-color: #0e0a07;
+  padding: 4rem 2rem;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+}
+
+.contact-heading {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto 4rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.75rem 1rem;
+  border: none;
+  background: #eee;
+  color: #000;
+  font-family: inherit;
+}
+
+.contact-form button {
+  padding: 0.6rem 1.2rem;
+  background-color: #000;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  align-self: flex-end;
+}
+
+.contact-form button:hover {
+  background-color: white;
+  color: black;
+}
+
+.contact-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: left;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-left .brand {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-right {
+  flex: 2;
+  min-width: 300px;
+}
+
+.footer-right ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.footer-right li {
+  margin-bottom: 0.4rem;
+}
+/* styles/global.css */
+
+.about-container {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Helvetica Neue', sans-serif;
+  min-height: 100vh;
+}
+
+.banner {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.banner-image {
+  object-fit: cover;
+  z-index: 0;
+  width: 100%;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  z-index: 10;
+}
+
+.about-content {
+  padding: 4rem 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-right: 500px;
+  font-family: "Goblin One", serif;
+  
+}
+
+.subheading {
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  margin-top: -10px;
+  margin-right: 100px;
+ font-family: "Goblin One", serif;
+}
+
+.description {
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: #ccc;
+  margin-bottom: 3rem;
+  margin-right: 500px;
+  margin-top: 100px;
+  font-family: 'Oregano', serif;
+  font-size: 1.7rem;
+}
+.product-image-container {
+ 
+ 
+  align-items: center;
+  margin-top: -200px;
+}
+
+
+.product-image {
+  width: 650px;
+  
+  border-radius: 12px;
+ 
+  height: 700px;
+  margin-left: 500px;
+
+  
+}
+
+/* Section: Traditional Herbs */
+.herbs-section {
+  padding: 4rem 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.herbs-title {
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  margin-left: 100px;
+  text-transform: uppercase;
+  font-family: Georgia, serif;
+}
+
+.herbs-description {
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 800px;
+  margin-left: 100px;
+  margin-right: 300px;
+  margin-top: 50px;
+}
+
+/* Section: Director Message */
+.director-message {
+  background-color: #000000;
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.director-container {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-left: -100px;
+ 
+  border-radius: 10px;
+  background-color: #000;
+}
+
+.director-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+
+ margin-bottom:10px;
+}
+
+.director-text {
+  flex: 1;
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.director-name {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.director-name .title {
+  font-weight: normal;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+.footer {
+  background-color: #1a1a1a;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.footer-logo img {
+  width: 320px;
+  max-width: 90%;
+  margin: 0 auto 2rem;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-socials img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s ease;
+}
+
+.footer-socials a:hover img {
+  transform: scale(1.1);
+}
+/* styles/products.css */
+
+.product-page {
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  background:#0E0A07;
+  padding: 2rem;
+  width: 100%;
+  height: auto;
+  
+}
+
+.title.colorful {
+  font-size: 3rem;
+  text-align: center;
+  color: #fffffd;
+  margin-bottom: 2rem;
+  margin-top: 20px;
+  margin-right: 600px;
+  font-family: 'Playfair Display', serif;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.product-card {
+  background:#0E0A07;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #31241b;
+  margin-bottom: 200px;
+  margin-top: 50px;
+
+
+}
+.product-card {
+ 
+  width: 250px;
+  height: 400px;
+  gap: .5rem;
+  display: grid;
+  background:radial-gradient(circle at 50% 50%, #844d2b7c, #000);
+  color: #fff;
+  border-radius: 50% / 35%; /* Oval shape */
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(230, 148, 67, 0.1);
+}
+
+
+
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(57, 50, 21, 0.3);
+  background: #ad7b1d;
+}
+
+.card-img {
+  width: 90%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+.product-card p{
+  font-size: 1rem;
+  color: #ffffff;
+  margin-top: -10px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+
+.product-card h3 {
+  font-size: 1.5rem;
+  margin-top: -40px;
+  color: #f9f9f9;
+}
+
+.product-detail {
+  background:#0E0A07;
+  margin-right: 50px;
+  margin-left: 50px;
+  font-size: 1.3rem;
+ 
+  border-top: 2px solid #504d4d;
+  margin-top: 3rem;
+}
+
+.detail-title {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.detail-content {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  
+}
+
+.detail-img {
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.detail-content ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+.detail-content li {
+  margin-bottom: 1rem;
+}
+
+.close-btn {
+  background: #ffffff;
+  color: #000;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background 0.3s ease;
+}
+
+.close-btn:hover {
+  background:#996d4da4;
+}
+
+.cocktail-page {
+  background: #0a0a0a;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  padding: 4rem 2rem;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 8rem;
+  margin-bottom: 3rem;
+  color: #f5f5f5;
+
+}
+.title{
+  margin-left: 600px;
+  font-size: 5rem;
+  margin-top: -40px;
+}
+
+.cocktail-section {
+  margin-bottom: 5rem;
+  padding: 2rem 0;
+}
+
+.cocktail-section.alt-bg {
+  background: #7c5b43e7;
+  border-radius: 14px;
+  margin-left: -30px;
+  margin-right: -10px;
+  width: 100%;
+}
+
+.cocktail-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.cocktail-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.cocktail-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.cocktail-text {
+  max-width: 600px;
+}
+
+.cocktail-text h2 {
+  font-size: 3.5rem;
+  color: #ffcc70;
+  margin-bottom: 1rem;
+}
+.cocktail-text p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: #cccccc;
+  margin-bottom: 1.5rem;
+}
+
+.cocktail-text ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  padding: .5rem;
+}
+
+.inspiration {
+  font-style: italic;
+  color: #aaa;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
   .cocktail-content {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column !important;
     text-align: center;
   }
 
-  .title,
-  .main-title,
-  .collections-title,
-  .title-colorful {
-    text-align: center;
-    margin-left: 0;
-  }
-
-  .heading,
-  .subheading {
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  .product-image-container {
-    margin-top: 0;
-    text-align: center;
+  .cocktail-text, .cocktail-image {
+    width: 100%;
   }
 }
 
-/* Mobile Devices: max-width 768px */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
-  }
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .5s ease, transform 2.5s ease;
+}
 
-  .navbar-right a {
-    margin-left: 0;
-    margin-top: 0.75rem;
-    display: block;
-  }
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-  .hero {
-    height: 50vh;
-  }
+.contact-page {
+  padding: 4rem 2rem;
+  background: #0e0e0e;
+  color: white;
+  font-family: 'Playfair Display', serif;
+}
 
-  .section-heading,
-  .section-heading1,
-  .heading,
-  .subheading,
-  .cocktail-text h2 {
-    font-size: 2rem;
-    margin-left: 0;
-    text-align: center;
-  }
+.contact-title {
+  font-size: 4rem;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
 
+.contact-details {
+  text-align: center;
+  margin-bottom: 3rem;
+  line-height: 1.8;
+  font-size: 1.3rem;
+  margin-top: 130px;
+}
+.strongdet{
+  font-size: 2rem;
+  color: rgba(164, 156, 156, 0.814);
+}
+
+.contact-details a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.social-section {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-links img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+  transform: scale(1.2);
+}
+
+.enquiry-form-section {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.form-heading {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #111;
+  color: white;
+  border: 1px solid #444;
+}
+
+.enquiry-form input::placeholder,
+.enquiry-form textarea::placeholder {
+  color: #888;
+}
+
+.submit-btn {
+  background-color: #ffffff;
+  color: black;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+/* Original styles remain unchanged above */
+
+/* ------------------ Responsive Styles ------------------ */
+
+@media (max-width: 1200px) {
   .section-text,
   .section-text1,
   .section-text2,
   .description,
-  .company-text,
-  .cocktail-text p,
+  .heading,
+  .subheading,
   .herbs-description {
-    margin: 0 20px;
-    text-align: center;
-    font-size: 1.1rem;
+    margin-right: 50px;
+  }
+
+  .product-image {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
   }
 
   .section-image,
-  .bottle-alone,
-  .product-image,
-  .detail-img {
-    width: 100%;
+  .bottle-alone {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+@media (max-width: 992px) {
+  .company-content,
+  .detail-content,
+  .cocktail-content,
+  .production-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-right {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .hero-banner {
     height: auto;
-    margin: 2rem auto;
   }
 
   .product-card {
     width: 90%;
-    height: auto;
     border-radius: 12px;
   }
+}
 
-  .product-page .title.colorful {
-    margin-right: 0;
+@media (max-width: 768px) {
+  .section-heading,
+  .section-heading1,
+  .title-colorful,
+  .title.colorful,
+  .main-title,
+  .contact-title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem;
+  }
+
+  .section-text,
+  .section-text1,
+  .section-text2,
+  .description,
+  .herbs-description,
+  .company-text,
+  .cocktail-text,
+  .contact-details {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+  }
+
+  .product-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .product-card {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    padding: 1rem;
+  }
+
+  .footer-logo img {
+    width: 80%;
+  }
+
+  .banner-text {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    padding: 1rem;
+  }
+
+  .carousel-controls button {
     font-size: 2rem;
   }
 
-  .company-content {
-    flex-direction: column;
+  .contact-form,
+  .enquiry-form-section {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .title,
+  .main-title,
+  .subheading {
+    margin-left: 0;
+    margin-right: 0;
     text-align: center;
-  }
-
-  .company-image {
-    width: 90%;
-  }
-
-  .footer-logos {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .director-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .director-img {
-    margin: 0 auto 1rem;
-  }
-
-  .cocktail-content,
-  .detail-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-socials {
-    flex-wrap: wrap;
-  }
-
-  .contact-details {
-    margin-top: 2rem;
-    font-size: 1.1rem;
-  }
-
-  .title {
-    font-size: 2.5rem;
-  }
-
-  .main-title {
-    font-size: 4rem;
-  }
-
-  .card-grid {
-    flex-direction: column;
-    align-items: center;
   }
 }
