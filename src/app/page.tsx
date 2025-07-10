@@ -1,103 +1,216 @@
-import Image from "next/image";
+'use client';
+import { useEffect, useState } from 'react';
+import './globals.css'; 
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const productImages = [
+    '/images/ok-img4-copy-1167x1667.webp',
+    '/images/ok-img4-copy-1167x1667.webp',
+    '/images/ok-img4-copy-1167x1667.webp',
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const [index, setIndex] = useState(0);
+
+  const next = () => setIndex((prev) => (prev + 1) % productImages.length);
+  const prev = () => setIndex((prev) => (prev - 1 + productImages.length) % productImages.length);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % productImages.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="page-wrapper">
+  
+    <div className="home">
+      <header className="navbar">
+        <div className="navbar-left">
+          <img src="/images/ok-logo2-copy-529x136.webp" alt="Logo" className="logo" />
+          <div className="brand-text">
+            <h1>OttaKombann</h1>
+            <p>Un-aged Gooseberry Spirit</p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+        <nav className="navbar-right">
+          <a href="#">Home</a>
+          <a href="/about">About</a>
+          <a href="/product">Products</a>
+          <a href="#">Shop</a>
+          <a href="/recipes">Recipies</a>
+          <a href="/contact">Contact</a>
+        </nav>
+      </header>
+
+      
+      <div className="hero">
+        <div className="hero-overlay" />
+        <div className="hero-content">
+          <img
+            src="/images/okbanner-2-new-1-2000x1263.jpg"
+            alt="Hero Banner"
+            className="hero-banner"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+        </div>
+      </div>
+      </div>
+
+   
+      <section className="pagesection">
+        <hr className="section-divider" />
+
+      
+        <section className="section">
+          <div className="section-blue-border">
+            <div>
+              <h2 className="section-heading">Welcome to the <br /> Essence of Tradition</h2>
+              <p className="section-text">
+                At Ottakombann, we invite you on a journey back in time, to an era when craftsmanship and heritage were revered above all else. Rooted in centuries-old traditions, our traditional alcohol product embodies the essence of our ancestors, crafted with care and passion passed down through generations, resulting in a smooth and crisp taste that is unparalleled in the industry.
+              </p>
+            </div>
+            <img
+              src="/images/ok-img1-copy-875x1167.webp"
+              alt="Bottle and Food"
+              className="section-image"
+            />
+          </div>
+        </section>
+
+       
+        <section className="section">
+          <div className="center-text">
+            <h2 className="section-heading1">Crafted with passion, savored with pleasure</h2>
+            <p className="section-text1">
+              Ottakombann means Lone Tusker in South Indian Language Malayalam.Ottakombann "Naadan Vaatte" (Local Brew) is inspired by the traditional brew with rich ingredients from the tropical rainforests of the Indian Western Ghats, the once spice capital of the world. Malabar is the Land of monsoons and is located in the western part of the peninsula of India, Between the Western Ghats mountains and the Arabian sea. This naturally fermented liquor is infused with the zesty, luxurious fruity and floral aromas of Ayurveda herbs and spices, expertly combined with a distinctive infusion of Indian Gooseberry. The ideal culinary companion for this beverage is meat & fish dishes.
+            </p>
+            <img
+              src="/images/download.png"
+              alt="Ottakomban Bottle"
+              className="bottle-alone"
+            />
+            <hr className="section-divider1" />
+          </div>
+        </section>
+      </section>
+
+    
+      <section className="company-section">
+        <div className="company-content">
+          <p className="company-text">
+            Appayies Limited (“the Company”) is the creator of a distinctive brand of spirits, prepared to a proprietary recipe influenced by traditional South Indian spice liquors from the Western Ghats.Our mission is to reimagine the spice liquors of South India for the UK market. The Company's core product now is “Otta Kombann”, and plans to expand to a liquor line that adapts the distinct flavours of South Indian spices to the palates of UK consumers. The Company's products aim to deliver the rich Indian spice heritage in a contemporary, quality-compliant format.
+          </p>
+          <img
+            src="/images/ok-box1-copy-1049x872.webp"
+            alt="Otta Kombann Bottle and Box"
+            className="company-image"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+        </div>
+      </section>
+
+    
+      <section className="collections-section">
+        <h2 className="collections-title">
+          <span className="bold">OUR</span> COLLECTIONS
+        </h2>
+        <div className="carousel">
+          <img src={productImages[index]} alt={`Product ${index + 1}`} className="product-image1" />
+          <div className="carousel-controls">
+            <button onClick={prev}>&lt;</button>
+            <button onClick={next}>&gt;</button>
+          </div>
+        </div>
+      </section>
+      <section className="production-section">
+      <div className="production-row">
+        <div className="image-container">
+          <img
+            src="/images/7b104831-62b6-4d92-97fb-cbb56e3fed68-875x1167.webp"
+            alt="Distillation Process 1"
+            width={300}
+            height={400}
+            className="production-image1"
           />
-          Go to nextjs.org →
-        </a>
+        </div>
+        <p className="production-text">
+          Every step of our production process is meticulously curated, from the hand-picking of the finest ingredients to the careful blending and ageing in oak barrels.
+        </p>
+      </div>
+
+      <div className="production-row reverse">
+        <p className="production-text left">
+          Our master distillers, trained in the time-honoured techniques of our forefathers, ensure that each batch of [Brand Name] is a masterpiece of flavour and aroma.
+        </p>
+        <div className="image-container">
+          <img
+            src="/images/85a7ea29-9107-4ddb-be6f-3bea9ed65433-875x1167.webp"
+            alt="Distillation Process 2"
+            width={300}
+            height={400}
+            className="production-image"
+          />
+        </div>
+      </div>
+    </section>
+     <section className="footer-logos">
+      <div className="footer-box">
+        <img
+          src="/images/download (1).png"
+          alt="Distilled by Wharf"
+          width={200}
+          height={200}
+        />
+      </div>
+      <div className="footer-box">
+        <img
+          src="/images/download (2).png"
+          alt="Produced by Appayies"
+          width={200}
+          height={200}
+        />
+      </div>
+      <div className="footer-box">
+        <img
+          src="/images/misc-logo1-copy-816x734.webp"
+          alt="Drink Responsibly"
+          width={200}
+          height={200}
+        />
+      </div>
+    </section>
+    <section className="contact-wrapper">
+      <h2 className="contact-heading">Contact us for all your enquiries.</h2>
+
+      <form className="contact-form">
+        <input type="text" placeholder="Name" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Message" rows={5} required></textarea>
+        <button type="submit">SUBMIT ›</button>
+      </form>
+
+      <footer className="contact-footer">
+        <div className="footer-left">
+          <h3 className="brand">Ottakombann</h3>
+          <p>© Ottakombann – All Rights Reserved</p>
+        </div>
+        <div className="footer-right">
+          <div>
+            <strong>Contact:</strong>
+            <ul>
+              <li>Appayies Limited, 33 Chequers Way, Palmers Green, UK, N13 6LD.</li>
+              <li>Registered in England and Wales: 15335126</li>
+            </ul>
+          </div>
+          <div className="footer-social">
+            <strong>Follow Us:</strong>
+            <ul>
+              <li>Mob / WhatsApp: +44 (0) 7946 356379</li>
+              <li>Email: info@ottakombann.com</li>
+            </ul>
+          </div>
+        </div>
       </footer>
+    </section>
     </div>
   );
 }
