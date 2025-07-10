@@ -113,13 +113,26 @@ export default function Home() {
         <h2 className="collections-title">
           <span className="bold">OUR</span> COLLECTIONS
         </h2>
-        <div className="carousel">
-          <img src={productImages[index]} alt={`Product ${index + 1}`} className="product-image1" />
-          <div className="carousel-controls">
-            <button onClick={prev}>&lt;</button>
-            <button onClick={next}>&gt;</button>
-          </div>
-        </div>
+        
+  
+  <div className="carousel-wrapper">
+    <div className="carousel-track">
+      {productImages.map((src, i) => (
+        <img
+          key={i}
+          src={src}
+          alt={`Product ${i + 1}`}
+          className={`carousel-item ${i === index ? 'active' : ''}`}
+        />
+      ))}
+    </div>
+    <div className="carousel-controls">
+      <button onClick={prev}>&lt;</button>
+      <button onClick={next}>&gt;</button>
+    </div>
+  </div>
+ 
+
       </section>
       <section className="production-section">
       <div className="production-row">

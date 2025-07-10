@@ -234,7 +234,7 @@
 
 /* Carousel */
 .collections-section {
-  background: radial-gradient(circle at center, #1b0f07, #000);
+  background: radial-gradient(circle at center, #312218, #000);
   padding: 4rem 2rem;
   text-align: center;
   color: white;
@@ -979,6 +979,55 @@
 .submit-btn:hover {
   background-color: #ffffff;
 }
+.carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.carousel-item {
+  width: 200px;
+  height: auto;
+  opacity: 0.4;
+  transform: scale(0.9);
+  transition: all 0.s ease;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.carousel-item.active {
+  opacity: 1;
+  transform: scale(1.2);
+  z-index: 2;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-controls button {
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
 
 
 
@@ -988,7 +1037,7 @@
 
 
 
-/* Original styles remain unchanged above */
+/* Original styles remain above */
 
 /* ------------------ Responsive Styles ------------------ */
 
