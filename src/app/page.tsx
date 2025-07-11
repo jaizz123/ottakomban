@@ -1,6 +1,14 @@
 'use client';
 import { useEffect, useState } from 'react';
-import './globals.css'; 
+import './globals.css'; // Ensure this includes the updated styles below
+import Head from 'next/head';
+
+<Head>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+</Head>
 
 export default function Home() {
   const productImages = [
@@ -10,6 +18,7 @@ export default function Home() {
   ];
 
   const [index, setIndex] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false); // ✅ menu toggle state
 
   const next = () => setIndex((prev) => (prev + 1) % productImages.length);
   const prev = () => setIndex((prev) => (prev - 1 + productImages.length) % productImages.length);
@@ -23,38 +32,49 @@ export default function Home() {
 
   return (
     <div className="page-wrapper">
-  
-    <div className="home">
-      <header className="navbar">
-        <div className="navbar-left">
-          <img src="/images/ok-logo2-copy-529x136.webp" alt="Logo" className="logo" />
-          <div className="brand-text">
-            <h1>OttaKombann</h1>
-            <p>Un-aged Gooseberry Spirit</p>
-          </div>
-        </div>
-        <nav className="navbar-right">
-          <a href="#">Home</a>
-          <a href="/about">About</a>
-          <a href="/product">Products</a>
-          <a href="#">Shop</a>
-          <a href="/recipes">Recipies</a>
-          <a href="/contact">Contact</a>
-        </nav>
-      </header>
+
+      <div className="hero-section">
+        <img src="/images/hom.jpg" alt="Banner" className="hero-banner" />
 
       
-      <div className="hero">
-        <div className="hero-overlay" />
-        <div className="hero-content">
-          <img
-            src="/images/okbanner-2-new-1-2000x1263.jpg"
-            alt="Hero Banner"
-            className="hero-banner"
-          />
+        <a href="#know-more" className="know-more-btn">Know More</a>
+
+        
+        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+
+        
+        <nav className={`nav-links ${menuOpen ? 'open' : ''}`}>
+  <button className="close-icon" onClick={() => setMenuOpen(false)}>
+    &times;
+  </button>
+
+  <a href="/home">Home</a>
+  <a href="/about">About Us</a>
+  <a href="/products">Products</a>
+  <a href="/shop">Shop</a>
+
+  <div className="dropdown">
+    <button className="dropbtn">
+      Locations <i className="fa fa-caret-down"></i>
+    </button>
+    <div className="dropdown-content">
+      <a href="#">UK</a>
+      <a href="#">UAE</a>
+    </div>
+  </div>
+
+  <a href="/contact">Contact</a>
+</nav>
+
       </div>
-      </div>
+
+     
+ 
+
 
    
       <section className="pagesection">
@@ -94,77 +114,54 @@ export default function Home() {
         </section>
       </section>
 
-    
-      <section className="company-section">
-        <div className="company-content">
-          <p className="company-text">
-            Appayies Limited (“the Company”) is the creator of a distinctive brand of spirits, prepared to a proprietary recipe influenced by traditional South Indian spice liquors from the Western Ghats.Our mission is to reimagine the spice liquors of South India for the UK market. The Company's core product now is “Otta Kombann”, and plans to expand to a liquor line that adapts the distinct flavours of South Indian spices to the palates of UK consumers. The Company's products aim to deliver the rich Indian spice heritage in a contemporary, quality-compliant format.
-          </p>
-          <img
-            src="/images/ok-box1-copy-1049x872.webp"
-            alt="Otta Kombann Bottle and Box"
-            className="company-image"
-          />
-        </div>
-      </section>
+
+     <img src="images/PACKAGE BOX.png" className="package-box" alt="" />
 
     
-      <section className="collections-section">
-        <h2 className="collections-title">
-          <span className="bold">OUR</span> COLLECTIONS
-        </h2>
-        
-  
-  <div className="carousel-wrapper">
-    <div className="carousel-track">
-      {productImages.map((src, i) => (
-        <img
-          key={i}
-          src={src}
-          alt={`Product ${i + 1}`}
-          className={`carousel-item ${i === index ? 'active' : ''}`}
-        />
-      ))}
-    </div>
-    <div className="carousel-controls">
-      <button onClick={prev}>&lt;</button>
-      <button onClick={next}>&gt;</button>
-    </div>
+      <section className="products-section" id="products">
+  <h2 className="products-heading">
+    <span className="bold" style={{ color: 'black' }}>OUR</span> <span className="highlight">PRODUCTS</span>
+  </h2>
+  <p className="products-subheading">
+    Experience Ottakomban in three bold expressions — Gooseberry for a tangy-sweet twist,
+    Nutmeg for warm spice and depth, and Classic Red for a rich, earthy finish.
+    Each handcrafted to celebrate Kerala’s untamed spirit
+  </p>
+
+  <div className="products-container">
+    {[
+      {
+        title: 'GOOSEBERRY',
+        img: '/images/NELLIKA.png',
+        desc: 'The original Tusker delivers a tangy burst of gooseberry, a South Indian Ayurvedic favorite for its taste and health benefits.',
+      },
+      {
+        title: 'NUTMEG',
+        img: '/images/JATHIKKA_.png',
+        desc: 'The original Tusker delivers a tangy burst of gooseberry, a South Indian Ayurvedic favorite for its taste and health benefits.',
+      },
+      {
+        title: 'CLASSIC RED',
+        img: '/images/CLASSIC RED.png',
+        desc: 'This un-aged, handcrafted spirit blends nutmeg, gooseberry, and Indian redwood for a complex flavor with earthy notes, warm spice, and subtle sweetness.',
+      },
+    ].map((item, i) => (
+      <div className="product" key={i}>
+        <img src={item.img} alt={item.title} className="product-img" />
+        <div className="product-details">
+        <h3 className="product-title">{item.title}</h3>
+        <p className="product-desc">{item.desc}</p>
+        <a href="#" className="know-more-link">Know More</a>
+      </div>
+      </div>
+    ))}
   </div>
- 
+</section>
 
-      </section>
-      <section className="production-section">
-      <div className="production-row">
-        <div className="image-container">
-          <img
-            src="/images/7b104831-62b6-4d92-97fb-cbb56e3fed68-875x1167.webp"
-            alt="Distillation Process 1"
-            width={300}
-            height={400}
-            className="production-image1"
-          />
-        </div>
-        <p className="production-text">
-          Every step of our production process is meticulously curated, from the hand-picking of the finest ingredients to the careful blending and ageing in oak barrels.
-        </p>
-      </div>
-
-      <div className="production-row reverse">
-        <p className="production-text left">
-          Our master distillers, trained in the time-honoured techniques of our forefathers, ensure that each batch of [Brand Name] is a masterpiece of flavour and aroma.
-        </p>
-        <div className="image-container">
-          <img
-            src="/images/85a7ea29-9107-4ddb-be6f-3bea9ed65433-875x1167.webp"
-            alt="Distillation Process 2"
-            width={300}
-            height={400}
-            className="production-image"
-          />
-        </div>
-      </div>
-    </section>
+    <img src="images/Uae Main.png" className='uae-home-image' alt="uae-class" /> 
+    <a href="#know-more" className="know-more-btn2">Know More</a>
+   <img src="images/PRODUCTION PROCESS.png"  className="production-image" alt="distillation process" />
+   
      <section className="footer-logos">
       <div className="footer-box">
         <img
