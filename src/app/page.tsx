@@ -157,9 +157,9 @@ export default function Home() {
     ))}
   </div>
 </section>
-
-    <img src="images/Uae Main.png" className='uae-home-image' alt="uae-class" /> 
     <a href="#know-more" className="know-more-btn2">Know More</a>
+    <img src="images/Uae Main.png" className='uae-home-image' alt="uae-class" /> 
+    
    <img src="images/PRODUCTION PROCESS.png"  className="production-image" alt="distillation process" />
    <img src="images/TESTIMONIAL.png" className="testimonial-image" alt="customer testimonial" />
 

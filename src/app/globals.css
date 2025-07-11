@@ -195,12 +195,9 @@
   bottom: 6%;
   left: 1%;                     
 }
-.know-more-btn2 {
-  font-size: 0.45rem;           
-  padding: 0.4rem 0.8rem;       
-  bottom: 6%;
-  left: 1%;                     
-}
+
+
+
 }
 
 @media (max-width: 480px) {
@@ -210,12 +207,7 @@
     bottom: 5%;
     left:0%;
   }
-  .know-more-btn2 {
-    font-size: 0.4rem;
-    padding: 0.3rem 0.6rem;
-    bottom: 5%;
-    left:0%;
-  }
+  
 
   .hamburger span {
     width: 20px;
@@ -272,6 +264,27 @@
 .know-more-btn2:hover {
   background-color: #ffcc00;
   color: black;
+}
+
+@media (max-width: 768px) {
+  .know-more-btn2 {
+    font-size: 0.85rem;
+    padding: 0.5rem 1.2rem;
+    margin-left: 3%;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .know-more-btn2 {
+    font-size: 0.55rem;
+    padding: 0.4rem 1rem;
+    /* centers it */
+    display: block;
+    width: fit-content;
+    margin-top: 11rem;
+    
+  }
 }
 .package-box {
 
