@@ -163,40 +163,15 @@ export default function Home() {
    <img src="images/PRODUCTION PROCESS.png"  className="production-image" alt="distillation process" />
    <img src="images/TESTIMONIAL.png" className="testimonial-image" alt="customer testimonial" />
 
-     <section className="footer-logos">
-      <div className="footer-box">
-        <img
-          src="/images/download (1).png"
-          alt="Distilled by Wharf"
-          width={200}
-          height={200}
-        />
-      </div>
-      <div className="footer-box">
-        <img
-          src="/images/download (2).png"
-          alt="Produced by Appayies"
-          width={200}
-          height={200}
-        />
-      </div>
-      <div className="footer-box">
-        <img
-          src="/images/misc-logo1-copy-816x734.webp"
-          alt="Drink Responsibly"
-          width={200}
-          height={200}
-        />
-      </div>
-    </section>
+     
     <section className="contact-wrapper">
-      <h2 className="contact-heading">Contact us for all your enquiries.</h2>
+      <h2 className="contact-heading">Contact Us</h2>
 
       <form className="contact-form">
         <input type="text" placeholder="Name" required />
         <input type="email" placeholder="Email" required />
         <textarea placeholder="Message" rows={5} required></textarea>
-        <button type="submit">SUBMIT ›</button>
+        <button type="submit" className='submit-button'>SUBMIT ›</button>
       </form>
 
       <footer className="contact-footer">
@@ -222,6 +197,9 @@ export default function Home() {
         </div>
       </footer>
     </section>
+    <div className="warf">
+      <img src="images/warf.png" className='warf-image' alt="" />
+     </div>
     </div>
   );
 }
