@@ -153,7 +153,7 @@ export default function Home() {
     ].map((item, i) => (
       
 
-<Link href="/product#productnames" className="product-link" key={item.id || i}>
+<Link href="/product#productnames" scroll={false} className="product-link" key={i}>
   <div className="product">
     <img src={item.img} alt={item.title} className="product-img" />
     <div className="product-details">

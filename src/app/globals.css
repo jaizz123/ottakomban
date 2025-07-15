@@ -12,6 +12,10 @@
   padding: 2rem 5rem;
   color: white;
 }
+.html {
+  scroll-behavior: smooth;
+}
+
 
 
 .logo {
