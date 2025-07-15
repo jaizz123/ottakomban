@@ -100,7 +100,7 @@ export default function Home() {
               </p>
             </div>
             <img
-              src="/images/ok-img1-copy-875x1167.webp"
+              src="/images/ok-img1-copy-875x1167.webp
               alt="Bottle and Food"
               className="section-image"
             />
