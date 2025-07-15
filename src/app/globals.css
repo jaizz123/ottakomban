@@ -1,4 +1,5 @@
-/* Sticky Navbar */
+
+@import url('https://fonts.googleapis.com/css2?family=Economica:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
 .navbar {
   position: sticky;
   top: 0;
@@ -12,7 +13,7 @@
   color: white;
 }
 
-/* Logo */
+
 .logo {
   width: 100px;
   font-weight: bold;
@@ -22,65 +23,6 @@
   width: 250px;
   height: auto;
 }
-
-
-/* Nav Links */
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #ffcc00;
-}
-
-/* Dropdown */
-.dropdown {
-  position: relative;
-}
-
-.dropbtn {
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #1a1a1a;
-  top: 100%;
-  left: 0;
-  min-width: 100px;
-  border-radius: 4px;
-  z-index: 1100;
-}
-
-.dropdown-content a {
-  display: block;
-  color: white;
-  padding: 8px 12px;
-  text-decoration: none;
-}
-
-.dropdown-content a:hover {
-  background: #333;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
 /* Hamburger (mobile only) */
 .hamburger {
   display: none;
@@ -162,6 +104,7 @@
   transition: all 0.3s ease;
   z-index: 10;
   margin-left: 35px;
+  font-family: 'Economica', sans-serif;
 }
 
 .know-more-btn:hover {
@@ -194,15 +137,15 @@
 .nav-links {
   position: absolute;
   top: 40px;
-  right: 60px;
+  right: 100px;
   display: flex;
   gap: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 500;
   z-index: 1000;
-  
-  padding: 1rem 3rem;
-  backdrop-filter: blur(8px); 
+  font-family: 'Montserrat', sans-serif;
+  padding: 1rem 5rem;
+  backdrop-filter: blur(10px); 
   justify-content: flex-end; 
 }
 
@@ -227,9 +170,10 @@
 .dropbtn {
   background-color: transparent;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   border: none;
   cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .dropdown-content {
@@ -357,6 +301,19 @@
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
 .production-image{
@@ -382,7 +339,7 @@
 .know-more-btn2 {
   position: absolute;
   margin-top: 600px;
-  
+  font-family: 'economica', sans-serif;
   left: 5%;
   padding: 0.6rem 1.4rem;
   border: 2px solid #ffcc00;
@@ -460,7 +417,7 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 .contact-wrapper {
-  background-color: #acaaaad0;
+  background-color: #ffffffd0;
   padding: 4rem 2rem;
   color: white;
   font-family: 'Playfair Display', serif;
@@ -468,18 +425,20 @@
 }
 
 .contact-heading {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
-  color: #000000;
-  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+  color: #facc15;
+  font-size: 3rem;
+  margin-left: -20px;
+  font-family: 'montserrat', sans-serif;
 }
 
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  max-width: 400px;
-  margin: 0 auto 4rem;
+  max-width: 450px;
+  margin: 2rem auto 4rem;
   color: #000000;
 }
 
@@ -489,18 +448,21 @@
   border: none;
   background: #eee;
   color: #000000;
-  font-family: inherit;
+  font-family: 'economica', sans-serif;
+
 }
 
 .contact-form button {
   padding: 0.6rem 1.2rem;
-  background-color: #fbfbfb;
-  color: rgb(1, 1, 1);
-  border: 1px solid white;
+  background-color: #facc15;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 0.9rem;
+  font-size: 1rem;
   align-self: flex-end;
+  width: 100%;
+  font-family: 'economica', sans-serif;
 }
 
 .contact-form button:hover {
@@ -568,26 +530,34 @@
         font-size: 6rem;
         color: #facc15;
         margin-bottom: 0.5em;
+        font-family: 'Montserrat', sans-serif;
     }
 
     h1 {
       font-size: 2.5rem;
       color: #facc15; 
       margin-bottom: 0.5em;
+      font-weight: 500;
+      font-family: 'Montserrat', sans-serif;
 
     }
 
     h2 {
       font-size: 1.3rem;
-      font-weight: normal;
-      font-style: italic;
+      font-weight: 300;
+      font-family: 'Quicksand', sans-serif;
       margin-bottom: 1em;
+      
+      color: #354a0e;
     }
 
     p {
-      font-size: 1.1rem;
-      line-height: 1.8;
+      font-size: 1.05rem;
+      margin-top: 10px;
+      line-height: 1.7;
       margin-bottom: 1em;
+      font-family: 'Montserrat', sans-serif;
+
     }
 
     .herbs-section {
@@ -600,6 +570,8 @@
       font-size: 1.8rem;
       color: #facc15;
       margin-bottom: 1em;
+      font-family: 'Montserrat', sans-serif;
+
     }
 
     .herbs-description {
@@ -607,12 +579,14 @@
       line-height: 1.8;
       max-width: 800px;
       margin: 0 auto;
+      font-family: 'Montserrat', sans-serif;
     }
 
     .director-message {
       background-color: #111;
       padding: 60px 20px;
       color: #fff;
+      font-family: 'Montserrat', sans-serif;
     }
 
     .director-container {
@@ -642,6 +616,7 @@
   font-size: 1.1rem;
   margin-top: 1.2rem;
   line-height: 1.3;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .director-name .title {
@@ -652,6 +627,7 @@
   text-transform: uppercase;
   margin-left: 0px;
   margin-top: 0.3em; 
+  font-family: 'Quicksand', sans-serif;
 
 }
 @media (max-width: 768px) {
@@ -709,8 +685,14 @@
   margin-top: 100px;
   margin-right: 8rem;
   margin-left: 8rem;
+  margin-bottom: 30px;
   background: #fff;
   color: #111;
+  
+  font-family: 'Montserrat', sans-serif;
+}
+.grid-item-info-box p{
+  font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -719,7 +701,8 @@
 .availability-page {
   padding: 2rem;
   background-color: #fefaf6;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 150px;
 }
 
 .grid-container {
@@ -736,7 +719,7 @@
 }
 
 .info-box {
-  background: #f6f0e8;
+  background: #fefaf6;
   
   
 }
@@ -746,6 +729,29 @@
   width: 100%;
   height: auto;
   object-fit: cover;
+}
+@media (max-width: 768px) {
+  .availability-section {
+    margin: 80px 1rem 30px 1rem;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack items vertically */
+    gap: 1.5rem;
+  }
+
+  .map-image {
+    height: auto;
+    max-height: 300px;
+  }
+
+  .availability-page {
+    padding: 1.5rem 1rem;
+  }
+
+  .info-box {
+    padding: 1rem 0.5rem;
+  }
 }
 @media (max-width: 768px) {
   .grid-container {
@@ -852,7 +858,14 @@
   height: auto;
   transition: transform 0.3s ease;
 }
-
+.product-link{
+  text-decoration: none;
+ font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  display: inline-block;
+}
 
 .product-details {
   flex: 2 1 600px;
@@ -863,19 +876,24 @@
   font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #222;
+  color: #3f5013;
   margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
+
+  font-weight: 450;
 }
 
 .product-details p {
   font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .product-details ul {
   padding-left: 1.2rem;
   margin-bottom: 1.5rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .product-details ul li {
@@ -893,6 +911,7 @@
   font-size: 0.85rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .product-details button:hover {
@@ -1243,17 +1262,20 @@
 }
 
 .products-heading {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
-  font-family: 'Playfair Display', serif;
+  font-family: 'montserrat', sans-serif;
 }
 .products-heading .bold {
   color: black;
+  font-family: 'montserrat', sans-serif;
+  font-weight: 500;
 }
 
 .products-heading .highlight {
   color: #f5a623;
-  font-weight: 600;
+  font-weight: 500;
+  font-family: 'montserrat', sans-serif;
 }
 
 .products-subheading {
@@ -1262,6 +1284,7 @@
   font-size: 1.1rem;
   line-height: 1.6;
   color: #333;
+  font-family: 'economica', sans-serif;
 }
 
 .products-container {
@@ -1291,19 +1314,21 @@
 .product-title {
   font-size: 1.5rem;
   margin: 1rem 0 0.5rem;
-  font-family: 'Playfair Display', serif;
+  font-family: 'economica';
   letter-spacing: 1px;
-  color: black;
+  color: rgb(100, 78, 21);
 }
 
 .product-desc {
   font-size: 0.95rem;
   color: #555;
   line-height: 1.5;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.2rem;
+  font-family: 'montserrat', sans-serif;
+  
 }
 .product-details {
-  margin-top: -200px;
+  margin-top: -210px;
 }
 
 .know-more-link {
@@ -1312,6 +1337,7 @@
   font-size: 0.95rem;
   text-decoration: none;
   transition: color 0.3s ease;
+  cursor: pointer;
 }
 
 .know-more-link:hover {
@@ -1407,6 +1433,10 @@
 .footer-left {
   flex: 1;
   min-width: 200px;
+  margin-top: 70px;
+  margin-left: 50px;
+  font-size: 1rem;
+  font-family: 'montserrat', sans-serif;
 }
 
 .footer-left .brand {
@@ -1417,18 +1447,71 @@
 .footer-right {
   flex: 2;
   min-width: 300px;
+  font-size: 1rem;
+  margin-left: 300px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  font-family: 'montserrat', sans-serif;
 }
 
 .footer-right ul {
   list-style: none;
   padding: 0;
   margin: 0.5rem 0;
+  color: #343333dd;
 }
 
 .footer-right li {
   margin-bottom: 0.4rem;
 }
-/* styles/global.css */
+@media (max-width: 1024px) {
+  .footer-right {
+    margin-left: 100px;
+  }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 768px) {
+  .footer-left,
+  .footer-right {
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+  }
+
+  .footer-right {
+    margin-left: 0;
+  }
+
+  .footer-left .brand {
+    font-size: 1.3rem;
+  }
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 480px) {
+  .footer-left,
+  .footer-right {
+    width: 100%;
+    margin: 20px 0;
+    font-size: 0.9rem;
+  }
+
+  .footer-left {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .footer-right {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .footer-right ul {
+    padding-left: 0;
+  }
+}
 
 
 
@@ -1779,7 +1862,7 @@
 
 .contact-page {
   padding: 4rem 2rem;
-  background: #0e0e0e;
+  background: #000000;
   color: white;
   font-family: 'Playfair Display', serif;
 }

@@ -1,6 +1,18 @@
 'use client';
 import Image from 'next/image';
+import { Montserrat, Oregano } from 'next/font/google';
+import Link from 'next/link';
+import { link } from 'fs';
 
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['100', '300', '400', '500', '700', '900'],
+});
+
+const oregano = Oregano({
+  subsets: ['latin'],
+  weight: ['400'],
+});
 
 const products = [
   {
@@ -12,7 +24,8 @@ const products = [
       'Perfect for spiced meats, warm cocktails',
       'Inspired by spice plantations and herbal brews of South India'
     ],
-    button: 'Shop Now'
+    button: 'Shop Now',
+    link: 'https://tinyurl.com/5633tpyb'
   },
   {
     title: 'GOOSEBERRY FLAVOUR',
@@ -24,7 +37,8 @@ const products = [
       'Inspired by traditional toddy shop recipes from Kerala'
     ],
     button: 'Shop Now',
-    light: true
+    light: true,
+    link: 'https://tinyurl.com/2ypysd63'
   },
   {
     title: 'CLASSIC RED',
@@ -36,6 +50,7 @@ const products = [
       'Inspired by South India’s toddy legacy'
     ],
     button: 'Shop Now',
+    link: 'https://tinyurl.com/2m2cv75p'
   }
 ];
 
@@ -62,16 +77,18 @@ export default function OurCollectionPage() {
     <a href="/home">Home</a>
     <a href="/about">About</a>
     <a href="/product">Products</a>
-    <a href="/shop">Shop</a>
+    <a href="https://tinyurl.com/5633tpyb">Shop</a>
+
     <div className="dropdown">
-      <button className="dropbtn">
-        Locations <i className="fa fa-caret-down"></i>
-      </button>
-      <div className="dropdown-content">
-        <a href="#">UK</a>
-        <a href="#">UAE</a>
-      </div>
+     <button className="dropbtn">
+      Locations <i className="fa fa-caret-down"></i>
+     </button>
+     <div className="dropdown-content">
+     <a href="https://tinyurl.com/2m2cv75p" target="_blank" rel="noopener noreferrer">UK</a>
+     <a href="/uae">UAE</a>
+     </div>
     </div>
+    
     <a href="/contact">Contact</a>
   </nav>
 </div>
@@ -80,7 +97,7 @@ export default function OurCollectionPage() {
       </div>
       <img src="/images/Product Page Banner.png" className="productpage-banner-image" alt="Banner" />
       
-      <div className="collection-wrapper">
+      <div id="productnames" className="collection-wrapper">
         {products.map((product, index) => (
           <section
             key={index}
@@ -103,7 +120,9 @@ export default function OurCollectionPage() {
                     <li key={i}>{item}</li>
                   ))}
                 </ul>
-                <button>{product.button}</button>
+                <Link href={product.link} className="button-link">
+  <button>{product.button}</button>
+</Link>
               </div>
             </div>
           </section>

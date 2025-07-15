@@ -1,4 +1,12 @@
 import React from 'react';
+import { Montserrat, Oregano } from 'next/font/google';
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['100', '300', '400', '500', '700', '900'],
+});
+
+
 
 export default function AboutPage() {
   return (
@@ -18,16 +26,16 @@ export default function AboutPage() {
           <a href="/home">Home</a>
           <a href="/about">About</a>
           <a href="/product">Products</a>
-          <a href="/shop">Shop</a>
-          <div className="dropdown">
-            <button className="dropbtn">
-              Locations <i className="fa fa-caret-down"></i>
-            </button>
-            <div className="dropdown-content">
-              <a href="#">UK</a>
-              <a href="#">UAE</a>
-            </div>
-          </div>
+          <a href="https://tinyurl.com/5633tpyb">Shop</a>
+           <div className="dropdown">
+     <button className="dropbtn">
+      Locations <i className="fa fa-caret-down"></i>
+     </button>
+     <div className="dropdown-content">
+     <a href="https://tinyurl.com/2m2cv75p" target="_blank" rel="noopener noreferrer">UK</a>
+     <a href="/uae">UAE</a>
+     </div>
+    </div>
           <a href="/contact">Contact</a>
         </nav>
       </header>
@@ -47,10 +55,10 @@ export default function AboutPage() {
         <div className="avail-container">
           <div className="availability-page">
       <div className="grid-container">
-        {/* Top Left Map Image */}
+        
         <div className="grid-item">
           <img
-            src="/images/map1.png"
+            src="images/map1.png"
             alt="Map 1"
             width={400}
             height={300}
@@ -58,8 +66,8 @@ export default function AboutPage() {
           />
         </div>
 
-        {/* Premium Cellars Info */}
-        <div className="grid-item info-box">
+        
+        <div className="grid-item-info-box">
           <img src="/images/Premium Cellars.png" alt="Premium Cellars Logo" width={200} height={80} />
           <p>
             Also available online @: <br />
@@ -75,7 +83,7 @@ export default function AboutPage() {
           </p>
         </div>
 
-        {/* Richmond Cellar Info */}
+       
         <div className="grid-item info-box">
           <img src="/images/Richmond Cellar.png" alt="Richmond Logo" width={180} height={80} />
           <p>
@@ -99,10 +107,10 @@ export default function AboutPage() {
           </p>
         </div>
 
-        {/* Map for Richmond */}
+        
         <div className="grid-item">
           <img
-            src="/images/map2.png"
+            src="images/map2.png"
             alt="Map 2"
             width={400}
             height={300}
@@ -110,10 +118,10 @@ export default function AboutPage() {
           />
         </div>
 
-        {/* Barracuda Map */}
+        
         <div className="grid-item">
           <img
-            src="/images/map3.png"
+            src="images/map3.png"
             alt="Barracuda Map"
             width={400}
             height={300}

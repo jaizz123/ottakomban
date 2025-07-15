@@ -1,5 +1,15 @@
 'use client';
 import { useEffect, useState } from 'react';
+import { Montserrat, Oregano } from 'next/font/google';
+import Link from 'next/link';
+
+
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['100', '300', '400', '500', '700', '900'],
+});
+
+
 
 import Head from 'next/head';
 
@@ -36,8 +46,8 @@ export default function Home() {
       <div className="hero-section">
         <img src="/images/hom.jpg" alt="Banner" className="hero-banner" />
 
-      
-        <a href="#know-more" className="know-more-btn">Know More</a>
+
+        <a href="/about" className="know-more-btn">Know More</a>
 
         
         <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
@@ -55,17 +65,17 @@ export default function Home() {
   <a href="/home">Home</a>
   <a href="/about">About Us</a>
   <a href="/product">Products</a>
-  <a href="/shop">Shop</a>
+  <a href="https://tinyurl.com/5633tpyb ">Shop</a>
 
   <div className="dropdown">
-    <button className="dropbtn">
+     <button className="dropbtn">
       Locations <i className="fa fa-caret-down"></i>
-    </button>
-    <div className="dropdown-content">
-      <a href="#">UK</a>
-      <a href="#">UAE</a>
+     </button>
+     <div className="dropdown-content">
+     <a href="https://tinyurl.com/2m2cv75p" target="_blank" rel="noopener noreferrer">UK</a>
+     <a href="/uae">UAE</a>
+     </div>
     </div>
-  </div>
 
   <a href="/contact">Contact</a>
 </nav>
@@ -138,25 +148,38 @@ export default function Home() {
       {
         title: 'CLASSIC RED',
         img: '/images/CLASSIC RED.png',
-        desc: 'This un-aged, handcrafted spirit blends nutmeg, gooseberry, and Indian redwood for a complex flavor with earthy notes, warm spice, and subtle sweetness.',
+        desc: 'This un-aged spirit blends nutmeg, gooseberry, and Indian redwood for a rich, earthy flavor with warm spice and subtle sweetness',
       },
     ].map((item, i) => (
-      <div className="product" key={i}>
-        <img src={item.img} alt={item.title} className="product-img" />
-        <div className="product-details">
-        <h3 className="product-title">{item.title}</h3>
-        <p className="product-desc">{item.desc}</p>
-        <a href="#" className="know-more-link">Know More</a>
-      </div>
-      </div>
+      
+
+<Link href="/product#productnames" className="product-link" key={item.id || i}>
+  <div className="product">
+    <img src={item.img} alt={item.title} className="product-img" />
+    <div className="product-details">
+      <h3 className="product-title">{item.title}</h3>
+      <p className="product-desc">{item.desc}</p>
+      <span className="know-more-link">Know More</span>
+    </div>
+  </div>
+</Link>
+
+
     ))}
   </div>
 </section>
 
-     <a href="#know-more" className="know-more-btn2">Know More</a>
+     <a href="/uae" className="know-more-btn2">Know More</a>
     <img src="images/Uae Main.png" className='uae-home-image' alt="uae-class" /> 
       
-    <img src="images/Uae product page.png" className='uae-product-image' alt="uae-class" />
+    <a href="https://tinyurl.com/5633tpyb" target="_blank" rel="noopener noreferrer">
+  <img
+    src="images/Uae product page.png"
+    className="uae-product-image"
+    alt="uae-class"
+  />
+</a>
+
     <img src="images/PRODUCTION PROCESS.png"  className="production-image" alt="distillation process" />
     <img src="images/COCKTAIL RECIPES.png" className="cocktail-recipes" alt="cocktail recipes" />
     <img src="images/PACKAGE BOX.png" className="package-box" alt="" />

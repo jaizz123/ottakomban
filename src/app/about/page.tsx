@@ -3,6 +3,11 @@
 'use client';
 
 import React from 'react';
+import { Montserrat, Oregano } from 'next/font/google';
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['100', '300', '400', '500', '700', '900'],
+});
 
 
 
@@ -28,15 +33,15 @@ export default function AboutPage() {
     <a href="/home">Home</a>
     <a href="/about">About</a>
     <a href="/product">Products</a>
-    <a href="/shop">Shop</a>
-    <div className="dropdown">
-      <button className="dropbtn">
-        Locations <i className="fa fa-caret-down"></i>
-      </button>
-      <div className="dropdown-content">
-        <a href="#">UK</a>
-        <a href="#">UAE</a>
-      </div>
+    <a href="https://tinyurl.com/5633tpyb">Shop</a>
+     <div className="dropdown">
+     <button className="dropbtn">
+      Locations <i className="fa fa-caret-down"></i>
+     </button>
+     <div className="dropdown-content">
+     <a href="https://tinyurl.com/2m2cv75p" target="_blank" rel="noopener noreferrer">UK</a>
+     <a href="/uae">UAE</a>
+     </div>
     </div>
     <a href="/contact">Contact</a>
   </nav>
@@ -131,9 +136,7 @@ ethical practices</p>
       <img src="images/instagram-1-svgrepo-com.svg" alt="Instagram" />
     </a>
     
-    <a href="#" aria-label="YouTube">
-      <img src="images/youtube-color-svgrepo-com.svg" alt="YouTube" />
-    </a>
+    
   </div>
 </footer>
 

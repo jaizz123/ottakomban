@@ -3,6 +3,11 @@
 
 import Head from 'next/head';
 import { useState } from 'react';
+import { Montserrat, Oregano } from 'next/font/google';
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['100', '300', '400', '500', '700', '900'],
+});
 
 
 export default function ContactPage() {
@@ -29,10 +34,41 @@ export default function ContactPage() {
       <Head>
         <title>Contact | Ottakomban</title>
       </Head>
+      <div className="navbar">
+  <img src="images/ok-logo2-copy-529x136.webp" className="navbar-logo" alt="logo" />
+
+  <input
+    type="checkbox"
+    id="menu-toggle"
+    className="menu-toggle"
+    onChange={() => {}}
+  />
+  <label htmlFor="menu-toggle" className="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <nav className="nav-links">
+    <a href="/home">Home</a>
+    <a href="/about">About</a>
+    <a href="/product">Products</a>
+    <a href="https://tinyurl.com/5633tpyb ">Shop</a>
+     <div className="dropdown">
+     <button className="dropbtn">
+      Locations <i className="fa fa-caret-down"></i>
+     </button>
+     <div className="dropdown-content">
+     <a href="https://tinyurl.com/2m2cv75p" target="_blank" rel="noopener noreferrer">UK</a>
+     <a href="/uae">UAE</a>
+     </div>
+    </div>
+    <a href="/contact">Contact</a>
+  </nav>
+</div>
       
       <div className="contact-page">
-        <img src="images/ok-logo2-copy-529x136.webp" className="navbar-logo" alt="logo" />
-        <h1 className="contact-title">Contact Us</h1>
+        
 
         <div className="contact-details">
           <p><strong className='strongdet'>Company:</strong> Appayies Limited</p>

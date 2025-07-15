@@ -2,6 +2,11 @@
 
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
+import { Montserrat, Oregano } from 'next/font/google';
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['100', '300', '400', '500', '700', '900'],
+});
 
 
 export default function Cocktails() {
