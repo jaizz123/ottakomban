@@ -1,88 +1,114 @@
-"use client";
+'use client';
+import Image from 'next/image';
 
-
-import { useState } from 'react';
 
 const products = [
   {
-    name: "Original Spiced Brew",
-    image: "/images/ok-img4-copy-1167x1667.webp",
-    short: "Tangy gooseberry with subtle spice.",
-    description:
-      "The original Tusker brings a fresh and tangy burst of gooseberry (amla) to the table, balanced with traditional spices. This un-aged spirit has a bright, slightly tart profile, with herbal and citrus notes that awaken the senses.",
-    notes: "Tangy, citrusy freshness, subtle spice undertones",
-    bestEnjoyed: "Chilled, with tonic or lime, or in refreshing cocktails",
-    inspiration:
-      "A modern take on ancient healing ingredients and forest flavours."
+    title: 'NUTMEG FLAVOUR',
+    image: '/images/JATHIKKA_.png',
+    description: `This variant is a tribute to the spice-rich groves of Wayanad and Tamil Nadu, where nutmeg has been cultivated for centuries. Its distinct aroma brings warmth to every sip, ideal in spiced cocktails.`,
+    highlights: [
+      'Tasting Notes: Fragrant, peppery warmth, smooth finish',
+      'Perfect for spiced meats, warm cocktails',
+      'Inspired by spice plantations and herbal brews of South India'
+    ],
+    button: 'Shop Now'
   },
   {
-    name: "Classic Red",
-    image: "/images/ok-img4-copy-1167x1667.webp",
-    short: "Bold blend of nutmeg & redwood.",
-    description:
-      "Classic Red is a bold, full-bodied spirit infused with a meticulously balanced mix of nutmeg, gooseberry, and Indian redwood. It offers a complex flavour with earthy undertones, warm spice, and a touch of natural sweetness.",
-    notes: "Warm spice, slight tanginess, woody smooth finish",
-    bestEnjoyed: "Neat, on the rocks, or in craft cocktails",
-    inspiration: "Inspired by the deep forests of South India and its spice legacy"
+    title: 'GOOSEBERRY FLAVOUR',
+    image: '/images/NELLIKA.png',
+    description: `The original Toddy flavour brings a fresh and tangy burst of gooseberry (amla) to the drink, a fruit revered in Ayurveda. This refreshing blend is perfect for light snacks and summer evenings.`,
+    highlights: [
+      'Tasting Notes: Tangy, citrusy freshness, subtle herbal undertones',
+      'Pairs great with coastal cuisine or light snacks',
+      'Inspired by traditional toddy shop recipes from Kerala'
+    ],
+    button: 'Shop Now',
+    light: true
   },
   {
-    name: "Nutmeg Flavour",
-    image: "/images/ok-img4-copy-1167x1667.webp",
-    short: "Warm, fragrant nutmeg spirit.",
-    description:
-      "Made from the flesh of nutmeg, this handcrafted spirit delivers a warm, fragrant flavour with hints of pepper, clove, and a mild sweetness.",
-    notes: "Fragrant, peppery warmth, smooth finish",
-    bestEnjoyed: "Neat, with soda, or spiced mixers",
-    inspiration:
-      "Rooted in the legacy of spice plantations and traditional herbal brews of India."
+    title: 'CLASSIC RED',
+    image: '/images/CLASSIC RED.png',
+    description: `Classic Red is the signature blend of Ottakomban — bold, full-bodied and spicy. Inspired by the toddy tapping traditions of South India, it offers warm spice and a woody finish.`,
+    highlights: [
+      'Tasting Notes: Warm spices, slight smokiness, woody mouthfeel',
+      'Enjoy neat or with soda',
+      'Inspired by South India’s toddy legacy'
+    ],
+    button: 'Shop Now',
   }
 ];
 
-export default function ProductsPage() {
-  const [selected, setSelected] = useState<number | null>(null);
-
+export default function OurCollectionPage() {
   return (
-    <div className="product-page">
-      
-      <section className="product-cards">
-        <h2 className="title colorful">Our Products</h2>
-        <div className="card-grid">
-          {products.map((p, i) => (
-            <div
-              key={i}
-              className="product-card"
-              onClick={() => setSelected(i)}
-            >
-              <img src={p.image} alt={p.name} className="card-img" />
-              <h3>{p.name}</h3>
-              <p>{p.short}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+    
+    <>
+    <div className="navbar">
+  <img src="images/ok-logo2-copy-529x136.webp" className="navbar-logo" alt="logo" />
 
-      {selected !== null && (
-        <section className="product-detail">
-          <h2 className="detail-title">{products[selected].name}</h2>
-          <div className="detail-content">
-            <img
-              src={products[selected].image}
-              alt={products[selected].name}
-              className="detail-img"
-            />
-            <div>
-              <p>{products[selected].description}</p>
-              <ul>
-                <li><strong>Tasting Notes:</strong> {products[selected].notes}</li>
-                <li><strong>Best Enjoyed:</strong> {products[selected].bestEnjoyed}</li>
-                <li><strong>Inspiration:</strong> {products[selected].inspiration}</li>
-              </ul>
-              <button onClick={() => setSelected(null)} className="close-btn">Close</button>
-            </div>
-          </div>
-        </section>
-      )}
-      
+  <input
+    type="checkbox"
+    id="menu-toggle"
+    className="menu-toggle"
+    onChange={() => {}}
+  />
+  <label htmlFor="menu-toggle" className="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
+  <nav className="nav-links">
+    <a href="/home">Home</a>
+    <a href="/about">About</a>
+    <a href="/product">Products</a>
+    <a href="/shop">Shop</a>
+    <div className="dropdown">
+      <button className="dropbtn">
+        Locations <i className="fa fa-caret-down"></i>
+      </button>
+      <div className="dropdown-content">
+        <a href="#">UK</a>
+        <a href="#">UAE</a>
+      </div>
     </div>
+    <a href="/contact">Contact</a>
+  </nav>
+</div>
+<div className="hero-overlay-product">
+        <h1>Our Collection</h1>
+      </div>
+      <img src="/images/Product Page Banner.png" className="productpage-banner-image" alt="Banner" />
+      
+      <div className="collection-wrapper">
+        {products.map((product, index) => (
+          <section
+            key={index}
+            className={`product-block ${product.light ? 'light-bg' : ''}`}
+          >
+            <div className="product-inner">
+              <div className="productpage-image">
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  width={180}
+                  height={400}
+                />
+              </div>
+              <div className="product-details">
+                <h2>{product.title}</h2>
+                <p>{product.description}</p>
+                <ul>
+                  {product.highlights.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+                <button>{product.button}</button>
+              </div>
+            </div>
+          </section>
+        ))}
+      </div>
+    </>
   );
 }

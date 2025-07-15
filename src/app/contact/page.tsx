@@ -29,7 +29,9 @@ export default function ContactPage() {
       <Head>
         <title>Contact | Ottakomban</title>
       </Head>
+      
       <div className="contact-page">
+        <img src="images/ok-logo2-copy-529x136.webp" className="navbar-logo" alt="logo" />
         <h1 className="contact-title">Contact Us</h1>
 
         <div className="contact-details">

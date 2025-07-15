@@ -1,6 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
-import './globals.css'; // Ensure this includes the updated styles below
+
 import Head from 'next/head';
 
 <Head>
@@ -10,7 +10,7 @@ import Head from 'next/head';
   />
 </Head>
 
-export default function Home() {
+export default function Home() {  
   const productImages = [
     '/images/ok-img4-copy-1167x1667.webp',
     '/images/ok-img4-copy-1167x1667.webp',
@@ -18,7 +18,7 @@ export default function Home() {
   ];
 
   const [index, setIndex] = useState(0);
-  const [menuOpen, setMenuOpen] = useState(false); // ✅ menu toggle state
+  const [menuOpen, setMenuOpen] = useState(false); 
 
   const next = () => setIndex((prev) => (prev + 1) % productImages.length);
   const prev = () => setIndex((prev) => (prev - 1 + productImages.length) % productImages.length);
@@ -54,7 +54,7 @@ export default function Home() {
 
   <a href="/home">Home</a>
   <a href="/about">About Us</a>
-  <a href="/products">Products</a>
+  <a href="/product">Products</a>
   <a href="/shop">Shop</a>
 
   <div className="dropdown">
@@ -81,7 +81,7 @@ export default function Home() {
         <hr className="section-divider" />
 
       
-        <section className="section">
+       {/* <section className="section">
           <div className="section-blue-border">
             <div>
               <h2 className="section-heading">Welcome to the <br /> Essence of Tradition</h2>
@@ -111,14 +111,9 @@ export default function Home() {
             />
             <hr className="section-divider1" />
           </div>
-        </section>
-      </section>
-
-
-     <img src="images/PACKAGE BOX.png" className="package-box" alt="" />
-
-    
-      <section className="products-section" id="products">
+        </section> */}
+      </section>  
+       <section className="products-section" id="products">
   <h2 className="products-heading">
     <span className="bold" style={{ color: 'black' }}>OUR</span> <span className="highlight">PRODUCTS</span>
   </h2>
@@ -157,10 +152,20 @@ export default function Home() {
     ))}
   </div>
 </section>
-    <a href="#know-more" className="know-more-btn2">Know More</a>
+
+     <a href="#know-more" className="know-more-btn2">Know More</a>
     <img src="images/Uae Main.png" className='uae-home-image' alt="uae-class" /> 
+      
+    <img src="images/Uae product page.png" className='uae-product-image' alt="uae-class" />
+    <img src="images/PRODUCTION PROCESS.png"  className="production-image" alt="distillation process" />
+    <img src="images/COCKTAIL RECIPES.png" className="cocktail-recipes" alt="cocktail recipes" />
+    <img src="images/PACKAGE BOX.png" className="package-box" alt="" />
+
     
-   <img src="images/PRODUCTION PROCESS.png"  className="production-image" alt="distillation process" />
+      
+    
+    
+   
    <img src="images/TESTIMONIAL.png" className="testimonial-image" alt="customer testimonial" />
 
      
