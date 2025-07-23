@@ -1,18 +1,17 @@
 'use client';
 import Image from 'next/image';
-import { Montserrat, Oregano } from 'next/font/google';
+import { Montserrat} from 'next/font/google';
 import Link from 'next/link';
 import { link } from 'fs';
+import './globals.css'
+
 
 const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['100', '300', '400', '500', '700', '900'],
 });
 
-const oregano = Oregano({
-  subsets: ['latin'],
-  weight: ['400'],
-});
+
 
 const products = [
   {

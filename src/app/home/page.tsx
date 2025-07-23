@@ -1,24 +1,17 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { Montserrat, Oregano } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
 import Link from 'next/link';
-
-
-const montserrat = Montserrat({
-  subsets: ['latin'],
-  weight: ['100', '300', '400', '500', '700', '900'],
-});
+import './globals.css'
 
 
 
-import Head from 'next/head';
 
-<Head>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-  />
-</Head>
+
+
+
+
+
 
 export default function Home() {  
   const productImages = [
@@ -168,10 +161,11 @@ export default function Home() {
     ))}
   </div>
 </section>
-
+<div className='know-more-btn2-div'>
      <a href="/uae" className="know-more-btn2">Know More</a>
     <img src="images/Uae Main.png" className='uae-home-image' alt="uae-class" /> 
-      
+   
+   </div>   
     <a href="https://tinyurl.com/5633tpyb" target="_blank" rel="noopener noreferrer">
   <img
     src="images/Uae product page.png"
@@ -192,39 +186,8 @@ export default function Home() {
    <img src="images/TESTIMONIAL.png" className="testimonial-image" alt="customer testimonial" />
 
      
-    <section className="contact-wrapper">
-      <h2 className="contact-heading">Contact Us</h2>
+    
 
-      <form className="contact-form">
-        <input type="text" placeholder="Name" required />
-        <input type="email" placeholder="Email" required />
-        <textarea placeholder="Message" rows={5} required></textarea>
-        <button type="submit" className='submit-button'>SUBMIT ›</button>
-      </form>
-
-      <footer className="contact-footer">
-        <div className="footer-left">
-          <h3 className="brand">Ottakombann</h3>
-          <p>© Ottakombann – All Rights Reserved</p>
-        </div>
-        <div className="footer-right">
-          <div>
-            <strong>Contact:</strong>
-            <ul>
-              <li>Appayies Limited, 33 Chequers Way, Palmers Green, UK, N13 6LD.</li>
-              <li>Registered in England and Wales: 15335126</li>
-            </ul>
-          </div>
-          <div className="footer-social">
-            <strong>Follow Us:</strong>
-            <ul>
-              <li>Mob / WhatsApp: +44 (0) 7946 356379</li>
-              <li>Email: info@ottakombann.com</li>
-            </ul>
-          </div>
-        </div>
-      </footer>
-    </section>
     <div className="warf">
       <img src="images/warf.png" className='warf-image' alt="" />
      </div>

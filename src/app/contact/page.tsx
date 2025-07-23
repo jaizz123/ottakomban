@@ -3,7 +3,9 @@
 
 import Head from 'next/head';
 import { useState } from 'react';
-import { Montserrat, Oregano } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
+import './globals.css'
+
 const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['100', '300', '400', '500', '700', '900'],
@@ -92,40 +94,35 @@ export default function ContactPage() {
 
         <div className="enquiry-form-section">
           <h2 className="form-heading">Send an Enquiry</h2>
-          <form onSubmit={handleSubmit} className="enquiry-form">
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              value={formData.subject}
-              onChange={handleChange}
-            />
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows={5}
-              value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-            <button type="submit" className="submit-btn">Submit</button>
-          </form>
+          <form
+  className="contact-form"
+  onSubmit={async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      body: JSON.stringify({
+        name: formData.get('name'),
+        email: formData.get('email'),
+        message: formData.get('message'),
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      alert('Message sent!');
+    } else {
+      alert('Failed to send.');
+    }
+  }}
+>
+  <input type="text" name="name" placeholder="Name" required />
+  <input type="email" name="email" placeholder="Email" required />
+  <textarea name="message" placeholder="Message" rows={5} required></textarea>
+  <button type="submit" className="submit-button">SUBMIT ›</button>
+</form>
         </div>
       </div>
     </>

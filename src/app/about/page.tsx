@@ -3,7 +3,9 @@
 'use client';
 
 import React from 'react';
-import { Montserrat, Oregano } from 'next/font/google';
+import { Montserrat } from 'next/font/google';
+import './globals.css'
+
 const montserrat = Montserrat({
   subsets: ['latin'],
   weight: ['100', '300', '400', '500', '700', '900'],

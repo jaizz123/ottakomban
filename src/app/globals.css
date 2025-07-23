@@ -14,6 +14,8 @@
 }
 .html {
   scroll-behavior: smooth;
+
+
 }
 
 
@@ -74,7 +76,7 @@
 
 .page-wrapper {
   font-family: 'Playfair Display', serif;
-  
+  justify-content: flex-end;
   color: white;
   overflow-x: hidden;
 }
@@ -254,6 +256,8 @@
 
   .dropbtn {
     font-size: 1rem;
+    display: flex;
+    padding: 0.4rem 0;
   }
 
   .dropdown-content {
@@ -269,7 +273,8 @@
   }
 
   .know-more-btn {
-  font-size: 0.45rem;           
+  font-size: 0.45rem;    
+
   padding: 0.4rem 0.8rem;       
   bottom: 6%;
   left: 1%;                     
@@ -327,12 +332,15 @@
   
 }
 .uae-home-image{
+  position: relative;
+  margin-bottom: 15%;
   width: 100%;
   height: auto;
   object-fit: cover;
  
 }
 .uae-product-image{
+  position: relative;
   width: 100%;
   height: auto;
   object-fit: cover;
@@ -373,19 +381,26 @@
   .know-more-btn2 {
     font-size: 0.85rem;
     padding: 0.5rem 1.2rem;
-    margin-left: 3%;
+    margin-left: 5%;
+    
   }
 }
 
+.know-more-btn2-div {
+  position: relative;
+  display: inline-block;
+  
+}
 
 @media (max-width: 480px) {
   .know-more-btn2 {
-    font-size: 0.55rem;
-    padding: 0.4rem 1rem;
-   
+    margin-top:50% ;
+        font-size: 0.35rem;
+ 
+   padding-top: 4%;
     display: block;
     width: fit-content;
-    margin-top: 10.5rem;
+    
     
   }
 }
@@ -552,7 +567,7 @@
       font-family: 'Quicksand', sans-serif;
       margin-bottom: 1em;
       
-      color: #354a0e;
+      color:#facc15;
     }
 
     p {
@@ -1920,8 +1935,8 @@
 .enquiry-form-section {
   max-width: 600px;
   margin: 0 auto;
-  padding: 2rem;
-  background-color: #1c1c1c;
+  
+  background-color: #000000;
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
 }
@@ -2082,7 +2097,7 @@
   }
 
   .hero-banner {
-    height: auto;
+    height: 120%;
   }
 
   .product-card {
@@ -2149,7 +2164,7 @@
   .contact-form,
   .enquiry-form-section {
     width: 100%;
-    padding: 1rem;
+   
   }
 
   .title,
@@ -2158,5 +2173,8 @@
     margin-left: 0;
     margin-right: 0;
     text-align: center;
+  }
+  .hero-banner {
+    height: 120%;
   }
 }
