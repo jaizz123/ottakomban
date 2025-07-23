@@ -4,7 +4,8 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import { Montserrat } from 'next/font/google';
-import './globals.css'
+
+
 
 const montserrat = Montserrat({
   subsets: ['latin'],

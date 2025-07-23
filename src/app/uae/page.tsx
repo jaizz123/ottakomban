@@ -1,6 +1,7 @@
 import React from 'react';
 import { Montserrat } from 'next/font/google';
-import './globals.css'
+
+
 
 
 const montserrat = Montserrat({

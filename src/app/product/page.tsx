@@ -3,7 +3,8 @@ import Image from 'next/image';
 import { Montserrat} from 'next/font/google';
 import Link from 'next/link';
 import { link } from 'fs';
-import './globals.css'
+
+
 
 
 const montserrat = Montserrat({
